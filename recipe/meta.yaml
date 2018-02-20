@@ -1,6 +1,6 @@
 {% set name = "Orange3-Network" %}
-{% set version = "1.3.0" %}
-{% set sha256 = "2879b5cf8e31ef2f7f7f9c00d8fc99ae2c3df92909ce27098527edd6d7fcac79" %}
+{% set version = "1.3.1" %}
+{% set sha256 = "27f20e5380e263ebd1b37168b3255d68d5ba82e496d3af0c2badc472a7951510" %}
 
 package:
   name: {{ name|lower }}
@@ -20,10 +20,11 @@ requirements:
   build:
     - python
     - setuptools
-    - numpy
+    - numpy 1.11.*
 
   run:
     - python
+    - numpy >=1.11
     - orange3
     - networkx >=1.10
     - pyqtgraph >=0.9.10
