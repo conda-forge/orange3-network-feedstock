@@ -1,6 +1,6 @@
 {% set name = "Orange3-Network" %}
-{% set version = "1.4.1" %}
-{% set sha256 = "3edd4ae00f443038ad641c7ea7668b7b813294930b87f7c67fd42d984b6ec6b9" %}
+{% set version = "1.4.2" %}
+{% set sha256 = "184d45c83960fc1a8db514fdcb5c2f623dd452ab445d46682e23b6c63323d099" %}
 
 package:
   name: {{ name|lower }}
@@ -51,3 +51,4 @@ extra:
     - astaric
     - kernc
     - primozgodec
+    - janezd
