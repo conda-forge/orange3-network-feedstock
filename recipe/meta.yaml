@@ -19,12 +19,15 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+
+  host:
     - python
-    - setuptools
-    - numpy 1.11.*
+    - pip
+    - numpy >=1.11
 
   run:
     - python
+    - setuptools
     - numpy >=1.11
     - orange3
     - networkx >=1.10
