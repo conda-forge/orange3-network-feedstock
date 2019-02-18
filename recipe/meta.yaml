@@ -23,13 +23,13 @@ requirements:
 
   host:
     - python
-    - pip
-    - numpy >=1.11
+    - setuptools
+    - numpy 1.11.*
 
   run:
     - python
     - setuptools
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.11
     - orange3
     - networkx >=1.10
     - pyqtgraph >=0.9.10
