@@ -1,6 +1,6 @@
 {% set name = "Orange3-Network" %}
-{% set version = "1.4.2" %}
-{% set sha256 = "184d45c83960fc1a8db514fdcb5c2f623dd452ab445d46682e23b6c63323d099" %}
+{% set version = "1.5.0" %}
+{% set sha256 = "a0fb7f5fb31af7ff2cb39ded1cc01bdd04ad75e599dba19c6eb8efa53ae0dff1" %}
 
 package:
   name: {{ name|lower }}
