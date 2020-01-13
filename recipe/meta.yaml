@@ -41,6 +41,10 @@ test:
 about:
   home: https://github.com/biolab/orange3-network
   license: GPL-3.0
+  license_file: 
+    - LICENSE 
+    - COPYING 
+
   summary: 'Networks add-on for Orange 3 data mining software package.'
   license_family: GPL
   doc_url: http://orange3-network.rtfd.io/
