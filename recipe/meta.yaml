@@ -1,6 +1,5 @@
 {% set name = "Orange3-Network" %}
 {% set version = "1.5.0" %}
-{% set sha256 = "a0fb7f5fb31af7ff2cb39ded1cc01bdd04ad75e599dba19c6eb8efa53ae0dff1" %}
 
 package:
   name: {{ name|lower }}
@@ -9,20 +8,22 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: a0fb7f5fb31af7ff2cb39ded1cc01bdd04ad75e599dba19c6eb8efa53ae0dff1
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [py2k]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}  # [osx]
 
   host:
     - python
+    - pip
     - setuptools
     - numpy 1.11.*
 
