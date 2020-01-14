@@ -17,11 +17,9 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}          # [not win]
-    - {{ compiler('m2w64_c') }}    # [win]
-    - {{ compiler('cxx') }}        # [not win]
-    - {{ compiler('m2w64_cxx') }}  # [win]
-    - {{ compiler('fortran') }}    # [osx]
+    - {{ compiler('c') }}          
+    - {{ compiler('cxx') }}        
+    - {{ compiler('fortran') }}  # [osx]
 
   host:
     - python
