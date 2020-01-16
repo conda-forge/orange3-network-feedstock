@@ -12,14 +12,13 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: "{{ PYTHON }} -m pip install . -vv --single-version-externally-managed"
   skip: True  # [py2k]
 
 requirements:
   build:
     - {{ compiler('c') }}          
     - {{ compiler('cxx') }}        
-    - {{ compiler('fortran') }}  # [osx]
 
   host:
     - python
