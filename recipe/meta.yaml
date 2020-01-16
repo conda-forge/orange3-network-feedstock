@@ -1,19 +1,17 @@
 {% set name = "Orange3-Network" %}
 {% set version = "1.5.0" %}
-{% set sha256 = "a0fb7f5fb31af7ff2cb39ded1cc01bdd04ad75e599dba19c6eb8efa53ae0dff1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: a0fb7f5fb31af7ff2cb39ded1cc01bdd04ad75e599dba19c6eb8efa53ae0dff1
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [py2k]
 
 requirements:
@@ -23,14 +21,16 @@ requirements:
 
   host:
     - python
+    - pip
     - setuptools
-    - numpy 1.11.*
+    - numpy
+    - numpy >=1.8.0
 
   run:
     - python
     - setuptools
-    - numpy >=1.11
-    - orange3
+    - {{ pin_compatible('numpy') }}
+    - orange3 >=3.20
     - networkx >=1.10
     - pyqtgraph >=0.9.10
 
@@ -41,6 +41,10 @@ test:
 about:
   home: https://github.com/biolab/orange3-network
   license: GPL-3.0
+  license_file: 
+    - LICENSE 
+    - COPYING 
+
   summary: 'Networks add-on for Orange 3 data mining software package.'
   license_family: GPL
   doc_url: http://orange3-network.rtfd.io/
