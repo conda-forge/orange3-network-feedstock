@@ -12,24 +12,24 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: "{{ PYTHON }} -m pip install --single-version-externally-managed --record=record.txt . -vv"
   skip: True  # [py2k]
 
 requirements:
   build:
     - {{ compiler('c') }}          
     - {{ compiler('cxx') }}        
-    - {{ compiler('fortran') }}  # [osx]
 
   host:
     - python
     - pip
     - setuptools
-    - numpy
+    - numpy 1.11.*
+
   run:
     - python
     - setuptools
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.11
     - orange3
     - networkx >=1.10
     - pyqtgraph >=0.9.10
