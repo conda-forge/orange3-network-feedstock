@@ -25,12 +25,11 @@ requirements:
     - python
     - pip
     - setuptools
-    - numpy 1.11.*
-
+    - numpy
   run:
     - python
     - setuptools
-    - numpy >=1.11
+    - {{ pin_compatible('numpy') }}
     - orange3
     - networkx >=1.10
     - pyqtgraph >=0.9.10
