@@ -12,7 +12,7 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv --single-version-externally-managed"
+  script: "{{ PYTHON }} -m pip install . -vv --single-version-externally-managed --record=record.txt"
   skip: True  # [py2k]
 
 requirements:
