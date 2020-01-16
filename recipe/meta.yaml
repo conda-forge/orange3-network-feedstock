@@ -6,7 +6,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: a0fb7f5fb31af7ff2cb39ded1cc01bdd04ad75e599dba19c6eb8efa53ae0dff1
 
@@ -17,19 +16,21 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}          
-    - {{ compiler('cxx') }}        
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
 
   host:
     - python
     - pip
     - setuptools
     - numpy
+    - numpy >=1.8.0
+
   run:
     - python
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - orange3
+    - orange3 >=3.20
     - networkx >=1.10
     - pyqtgraph >=0.9.10
 
