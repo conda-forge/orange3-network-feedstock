@@ -24,15 +24,12 @@ requirements:
     - pip
     - setuptools
     - numpy
-    - numpy >=1.8.0
+    - numpy >=1.16.0
 
   run:
     - python
-    - setuptools
     - {{ pin_compatible('numpy') }}
-    - orange3 >=3.20
-    - networkx >=1.10
-    - pyqtgraph >=0.9.10
+    - orange3 >=3.28
 
 test:
   imports:
