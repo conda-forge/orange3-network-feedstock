@@ -29,6 +29,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
+    - gensim
     - orange3 >=3.28
 
 test:
