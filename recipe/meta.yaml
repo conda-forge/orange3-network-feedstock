@@ -12,20 +12,20 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py2k]
+  skip: true  # [py<310]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - python <3.10
+    - python
     - pip
     - setuptools
     - cython
     - numpy >=1.16.0
   run:
-    - python <3.10
+    - python
     - anyqt
     - {{ pin_compatible('numpy') }}
     - gensim
