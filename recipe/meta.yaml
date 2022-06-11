@@ -18,19 +18,21 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-
   host:
     - python
     - pip
     - setuptools
     - cython
     - numpy >=1.16.0
-
   run:
     - python
+    - anyqt
     - {{ pin_compatible('numpy') }}
     - gensim
-    - orange3 >=3.28
+    - orange3 >=3.31
+    - orange-widget-base
+    - scipy
+    - scikit-learn
 
 test:
   imports:
