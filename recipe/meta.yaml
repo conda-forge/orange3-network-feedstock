@@ -28,7 +28,7 @@ requirements:
     - anyqt
     - {{ pin_compatible('numpy') }}
     - gensim
-    - orange3 >=3.31
+    - orange3 >=3.34
     - orange-widget-base
     - scipy
     - scikit-learn
