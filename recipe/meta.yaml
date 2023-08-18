@@ -1,5 +1,5 @@
 {% set name = "Orange3-Network" %}
-{% set version = "1.7.0" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: adeee9d2e0a7545c9bfeb7ddcfed143bdedc731a1b13d59703b541c75a98179e
+  sha256: dec14f7f14ec16247416c58cc62765081b5410795ebf51d2c83c89c6937f1e66
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
