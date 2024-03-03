@@ -1,5 +1,5 @@
 {% set name = "Orange3-Network" %}
-{% set version = "1.8.0" %}
+{% set version = "1.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dec14f7f14ec16247416c58cc62765081b5410795ebf51d2c83c89c6937f1e66
+  sha256: d93492c1149900b67eb7606a0456ee873378540e034b57c33e8367924220311c
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -28,7 +28,7 @@ requirements:
     - anyqt
     - {{ pin_compatible('numpy') }}
     - gensim
-    - orange3 >=3.34
+    - orange3 >=3.35
     - orange-widget-base
     - scipy
     - scikit-learn
