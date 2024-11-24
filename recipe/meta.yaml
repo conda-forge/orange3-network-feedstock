@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_').lower() }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_').lower() }}-{{ version }}.tar.gz
   sha256: 699c37db7c7e8202c794f0cd5e1952cc3f2ad42354ce527ac806fdaeaa76f1ff
 
 build:
@@ -23,14 +23,16 @@ requirements:
     - pip
     - setuptools
     - cython
-    - numpy >=1.16.0
+    - numpy
+    - trubar >=0.3.3
   run:
     - python
     - anyqt
-    - {{ pin_compatible('numpy') }}
+    - numpy
     - gensim
-    - orange3 >=3.35
+    - orange3 >=3.37
     - orange-widget-base
+    - pyqtgraph
     - scipy
     - scikit-learn
 
