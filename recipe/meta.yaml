@@ -54,6 +54,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - markotoplak
     - astaric
     - kernc
     - primozgodec
