@@ -246,5 +246,6 @@ Feedstock Maintainers
 * [@astaric](https://github.com/astaric/)
 * [@janezd](https://github.com/janezd/)
 * [@kernc](https://github.com/kernc/)
+* [@markotoplak](https://github.com/markotoplak/)
 * [@primozgodec](https://github.com/primozgodec/)
 
