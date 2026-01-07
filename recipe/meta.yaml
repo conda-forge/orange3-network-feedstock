@@ -1,5 +1,5 @@
 {% set name = "Orange3-Network" %}
-{% set version = "1.10.1" %}
+{% set version = "1.10.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_').lower() }}-{{ version }}.tar.gz
-  sha256: d70027a5293a62b3286df5daba8e7ecda9ccdfb059f933eb3ab710f9d9aadd03
+  sha256: 02710f651bcd6793e81f7e50add15058216c396953068ff88da55500c4758652
 
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py>=313]  # gensim currently not available
 
 requirements:
   build:
@@ -30,7 +31,7 @@ requirements:
     - anyqt
     - numpy
     - gensim
-    - orange3 >=3.37
+    - orange3 >=3.38.1
     - orange-widget-base
     - pyqtgraph
     - scipy
