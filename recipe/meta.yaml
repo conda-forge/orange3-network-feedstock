@@ -30,7 +30,7 @@ requirements:
     - anyqt
     - numpy
     - gensim
-    - orange3 >=3.37
+    - orange3 >=3.38.1
     - orange-widget-base
     - pyqtgraph
     - scipy
