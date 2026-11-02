@@ -1,16 +1,16 @@
 {% set name = "Orange3-Network" %}
-{% set version = "1.10.2" %}
+{% set version = "1.11" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_').lower() }}-{{ version }}.tar.gz
-  sha256: 02710f651bcd6793e81f7e50add15058216c396953068ff88da55500c4758652
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_').lower() }}-{{ version }}.tar.gz
+  sha256: ed2014010c55cfc019484e136f2e8cd85ee8d676ba75ba66e60fda0052e33711
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
